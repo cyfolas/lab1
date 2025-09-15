@@ -40,7 +40,7 @@ class Program
 
             Console.Write("Военнообязанный? (1 - да, 0 - нет): ");
             int temp = Convert.ToInt32(Console.ReadLine());
-            people[i].ms = (temp == 1) ? MilitaryStatus.liable : MilitaryStatus.nonliable;
+            people[i].ms = (MilitaryStatus)temp;
         }
 
         int youngest_age_1 = 1000;
@@ -76,4 +76,5 @@ class Program
         Console.WriteLine("Фамилия старшего по возрасту среди военнообязанных: " + oldest_surname_1);
         Console.WriteLine("Фамилия старшего по возрасту среди не военнообязанных: " + oldest_surname_0);
     }
+
 }
